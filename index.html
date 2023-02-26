@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <section class="main">
+        <!-- Menu block -->
+        <!-- <div class="menu">
+            <div>
+                <h1>PICK PLAYER 1'S MARK</h1>
+                <div>
+                    <button>X</button>
+                    <Button>O</Button>
+                </div>
+                <h2>REMEMBER : X GOES FIRST</h2>
+            </div>
+            <button id="play-cpu" onclick="displayMenu()">NEW GAME (VS CPU)</button>
+            <button id="play-player">NEW GAME (VS PLAYER)</button>
+        </div> -->
+        <!-- Board block -->
+        <div class="board">
+            <div class="board__header">
+                <div class="header__box-icon">
+                    <img src="./icons/icon-x.svg" alt="x">
+                    <img src="./icons/icon-o.svg" alt="o">
+                </div>
+                <div class="header__queue"> 
+
+                </div>
+                <button class="header__btn-restart">
+                    <img src="./icons/icon-restart.svg" alt="icon-restart">
+                </button>
+            </div>
+            <div class="board__box-item">
+                <div id="item-1" class="board__item"></div>
+                <div id="item-2" class="board__item"></div>
+                <div id="item-3" class="board__item board__item_margin"></div>
+                <div id="item-4" class="board__item"></div>
+                <div id="item-5" class="board__item"></div>
+                <div id="item-6" class="board__item board__item_margin"></div>
+                <div id="item-7" class="board__item"></div>
+                <div id="item-8" class="board__item"></div>
+                <div id="item-9" class="board__item board__item_margin"></div>
+            </div>
+            <div class="board__foter">
+                <div class="foter__item foter__item_left">
+                    <span>X</span>
+                    <span>0</span>
+                </div>
+                <div class="foter__item">
+                    <span>Ties</span>
+                    <span>0</span>
+                </div>
+                <div class="foter__item foter__item_right">
+                    <span>CPU</span>
+                    <span>0</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="./js/main.js"></script>
+</body>
+</html>

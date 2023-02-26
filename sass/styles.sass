@@ -1,0 +1,77 @@
+html
+    box-sizing: border-box
+
+
+.menu
+    height: 471px
+    width: 460px
+    background-color: red
+    // &_active
+    //     display: none
+
+.board
+    height: 623px
+    width: 460px
+    background-color:#1A2A33
+    // &_active
+    //     display: none
+    &__header
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        margin-bottom: 18px
+        align-items: center
+    &__box-item
+        display: flex
+        flex-flow: row wrap
+    &__foter
+        display: flex
+        flex-direction: row
+
+    &__item
+        box-sizing: border-box
+        width: 140px
+        height: 140px
+        background: #1F3641
+        box-shadow: inset 0px -8px 0px #10212A
+        border-radius: 15px
+        margin-right: 20px
+        margin-bottom: 20px
+        padding: 37px 0 0 37px
+        &_margin
+            margin-right: 0px
+
+.foter
+    &__item
+        width: 140px
+        height: 72px
+        border-radius: 15px
+        background-color: #979797
+        margin-right: 20px
+        &_right
+            margin-right: 0px
+            background-color: #F2B137
+        &_left
+            background-color: #31C3BD
+
+.header
+    display: flex
+    &__box-icon
+        align-content: center
+        img
+            width: 30.49px
+            height: 30.49px
+    &__queue
+        width: 140px
+        height: 52px
+        background: #1F3641
+        box-shadow: inset 0px -4px 0px #10212A
+        border-radius: 10px
+        color: #fff
+    &__btn-restart
+        width: 52px
+        height: 52px            
+        background: #A8BFC9
+        box-shadow: inset 0px -4px 0px #6B8997
+        border-radius: 10px
+        border: none
