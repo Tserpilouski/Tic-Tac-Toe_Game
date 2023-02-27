@@ -13,64 +13,63 @@
 
 //dodaanie hover efect 
 
-let first_move = 2;
-let path, idName, pathConst;
 
-if(first_move === 1){
-    first_move = 2;
-    path = "/icons/icon-o-outline.svg";
-    pathConst = "/icons/icon-o.svg"
-    idName = "prevO"
-}
-else{
-    first_move = 1;
-    path = "/icons/icon-x-outline.svg";
-    pathConst = "/icons/icon-x.svg"
-    idName = "prevX"
-}
-
+let first_move = 1;
+let path = "/icons/icon-x-outline.svg";
+let pathConst = "/icons/icon-x.svg";
+let id = "prevX";
+let idConst = "1";
 const itemBoard = document.querySelectorAll('.board__item');
-const imgPreview = document.createElement('img');
-imgPreview.src = path;
-imgPreview.id = idName;
 const div_array = Array.prototype.slice.call(itemBoard);
 
 
 div_array.forEach((element) => {
-
     element.addEventListener('mouseenter', () => {
+        const imgPreview = document.createElement('img');
+        imgPreview.src = path;
+        imgPreview.id = id;
         if(!element.hasChildNodes()){
             element.appendChild(imgPreview);
         }
     });
 
     element.addEventListener('mouseleave',() => {
-        if(element.childNodes[0].id == idName){
-            element.removeChild(imgPreview);
+        if(element.childNodes[0].id == id){
+            element.removeChild(element.childNodes[0]);
         }
     });
 
     element.addEventListener("click", () => {
-        if(element.childNodes[0].id == idName){
-            element.removeChild(imgPreview);
-            console.log('del')
+        if(element.childNodes[0].id == id){
+            element.removeChild(element.childNodes[0]);
         }
         if(!element.hasChildNodes()){
             let imgConst = document.createElement('img');
             imgConst.src = pathConst;
-            imgConst.id = "2"
-            element.appendChild(imgConst);
-            console.log("add element")            
+            imgConst.id = idConst
+            element.appendChild(imgConst);        
         };
     });
 
     element.onclick = function bro() { 
-        console.log(first_move)
-        first_move === 2 ? first_move = 1 : first_move = 2;
-        console.log(first_move)
-    }
+        if(first_move === 1){
+            first_move = 2;
+            path = "/icons/icon-o-outline.svg";
+            pathConst = "/icons/icon-o.svg"
+            id = "prevO"
+            idConst = "2"
+        }
+        else{
+            first_move = 1;
+            path = "/icons/icon-x-outline.svg";
+            pathConst = "/icons/icon-x.svg"
+            id = "prevX"
+            idConst = "1"
+        }
+    };
 });
-bro();
+
+
 //__Sprawdzenie znaczkow__
 
 // const data = [ [1, 0, 2],
