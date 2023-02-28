@@ -37,15 +37,15 @@
                 </button>
             </div>
             <div class="board__box-item">
-                <div id="item1" class="board__item"></div>
-                <div id="item2" class="board__item"></div>
-                <div id="item3" class="board__item board__item_margin"></div>
-                <div id="item4" class="board__item"></div>
-                <div id="item5" class="board__item"></div>
-                <div id="item6" class="board__item board__item_margin"></div>
-                <div id="item7" class="board__item"></div>
-                <div id="item8" class="board__item"></div>
-                <div id="item9" class="board__item board__item_margin"></div>
+                <div id="item00" class="board__item"></div>
+                <div id="item01" class="board__item"></div>
+                <div id="item02" class="board__item board__item_margin"></div>
+                <div id="item10" class="board__item"></div>
+                <div id="item11" class="board__item"></div>
+                <div id="item12" class="board__item board__item_margin"></div>
+                <div id="item20" class="board__item"></div>
+                <div id="item21" class="board__item"></div>
+                <div id="item22" class="board__item board__item_margin"></div>
             </div>
             <div class="board__foter">
                 <div class="foter__item foter__item_left">
@@ -60,6 +60,18 @@
                     <span>CPU</span>
                     <span>0</span>
                 </div>
+            </div>
+        </div>
+        <!-- block with information who won -->
+        <div class="block-won block-won_inactive">
+            <span class="block-won__info">YOU WON!</span>
+            <div class="block-won__box-title">
+                <img id="imgXO" src="./icons/icon-x.svg" alt="x">
+                <h3 id="h3title">TAKES THE ROUND</h3>
+            </div>
+            <div class="block-won__box-btn">
+                <button class="block-won__btn-quit">QUIT</button>
+                <button class="block-won__btn-next-round" onclick="nextRoundBtn()">NEXT ROUND</button>
             </div>
         </div>
     </section>

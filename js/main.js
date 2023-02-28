@@ -21,6 +21,9 @@ let id = "prevX";
 let idConst = "1";
 const itemBoard = document.querySelectorAll('.board__item');
 const div_array = Array.prototype.slice.call(itemBoard);
+let data = [[0, 0, 0],
+              [0, 0, 0],
+              [0, 0, 0]];
 
 
 div_array.forEach((element) => {
@@ -64,50 +67,91 @@ div_array.forEach((element) => {
             path = "/icons/icon-x-outline.svg";
             pathConst = "/icons/icon-x.svg"
             id = "prevX"
-            idConst = "1"
+            idConst = "3"
         }
+        createCell(element.id, idConst)
     };
 });
 
-
+function createCell(id, idConst){
+    const i = id.split('')[4];
+    const j = id.split('')[5];
+    data[i][j] = Number(idConst);
+    chek(data)
+    chek(data) == "win X" ? showYouWonX() : false;
+    chek(data) == "win O" ? showYouWonO() : false;
+};
 //__Sprawdzenie znaczkow__
 
-// const data = [ [1, 0, 2],
-//                [0, 2, 0],
-//                [2, 1, 1]];
+function chek(data){
+    let firstDig = 1;
+    let secondDig = 1;
+    let win;
+    for(let i = 0; i < 3; i++){
+        firstDig = firstDig * data[i][i];
+        secondDig = secondDig * data[2 - i][i];
+        if ((firstDig || secondDig) === 27){
+            win = "win O";
+            console.log(`Dioganal ${win}`);
+            break;
+        }
+        else if ((firstDig || secondDig) === 8){
+            win = "win X";
+            console.log(`Dioganal ${win}`);
+            break;
+        }
+        let row = 1;
+        let col = 1;
+        for(let j = 0; j < 3; j++){
+            row = row * data[i][j];
+            col = col * data[j][i];
+            if ((row || col) === 8){
+                win = "win X";
+                console.log(win);
+                break;
+            }
+            else if ((row || col) === 27){
+                win = "win O";
+                //console.log(win);
+                break;
+            }
+        }
+    }
+    return win
+}
 
-// let firstDig = 1;
-// let secondDig = 1;
+function showYouWonX(){
+    const imgXO = document.getElementById('imgXO');
+    document.getElementById('h3title').style.color = "#31C3BD";
+    imgXO.removeAttribute("src");
+    imgXO.setAttribute("src","/icons/icon-x.svg")
+    const block = document.querySelector('.block-won');
+    block.classList.remove("block-won_inactive");
+}
 
-// let win;
+function showYouWonO(){
+    console.log("broDupa");
+    const imgXO = document.getElementById('imgXO');
+    document.getElementById('h3title').style.color = "#F2B137";
+    imgXO.removeAttribute("src");
+    imgXO.setAttribute("src","/icons/icon-o.svg")
+    console.log(imgXO)
+    const block = document.querySelector('.block-won');
+    block.classList.remove("block-won_inactive");
+}
 
-// for(let i = 0; i < 3; i++){
-//     firstDig = firstDig * data[i][i];
-//     secondDig = secondDig * data[2 - i][i];
-//     if ((firstDig || secondDig) === 1){
-//         win = "win X";
-//         console.log(`Dioganal ${win}`);
-//         break;
-//     }
-//     else if ((firstDig || secondDig) === 8){
-//         win = "win O";
-//         console.log(`Dioganal ${win}`);
-//         break;
-//     }
-//     let row = 1;
-//     let col = 1;
-//     for(let j = 0; j < 3; j++){
-//         row = row * data[i][j];
-//         col = col * data[j][i];
-//     }
-//     if ((row || col) === 8){
-//         win = "win O";
-//         break;
-//     }
-//     else if ((row || col) === 1){
-//         win = "win X";
-//         break;
-//     }
-// }
-
-// console.log(win);
+function nextRoundBtn(){
+    const block = document.querySelector('.block-won');
+    block.classList.add("block-won_inactive");
+    console.log("dupa")
+    div_array.forEach((element) => {
+        console.log(element)
+        if(element.hasChildNodes()){
+            element.removeChild(element.firstChild);
+        }
+    });
+    data = [[0, 0, 0],
+            [0, 0, 0],
+            [0, 0, 0]];
+    return data
+}

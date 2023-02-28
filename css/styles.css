@@ -51,6 +51,9 @@ body {
 .board__item_margin {
   margin-right: 0px;
 }
+.board__item:hover {
+  cursor: pointer;
+}
 
 .foter__item {
   width: 140px;
@@ -92,4 +95,81 @@ body {
   box-shadow: inset 0px -4px 0px #6B8997;
   border-radius: 10px;
   border: none;
+}
+
+.block-won {
+  position: absolute;
+  left: 0px;
+  top: 40vh;
+  background-color: #9df9b6;
+  width: 100%;
+  height: 266px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.block-won_inactive {
+  display: none;
+}
+.block-won__info {
+  margin-bottom: 16px;
+  color: #A8BFC9;
+}
+.block-won__box-title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 24px;
+}
+.block-won__box-title img {
+  width: 64px;
+  height: 64px;
+  margin-right: 24px;
+}
+.block-won__box-title h3 {
+  margin: 0px;
+  height: 50px;
+  font-family: "Outfit";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 50px;
+  letter-spacing: 2.5px;
+  color: #31C3BD;
+}
+.block-won__box-btn {
+  display: flex;
+  flex-direction: row;
+}
+.block-won__box-btn button {
+  height: 52px;
+  border: none;
+  border-radius: 10px;
+  font-family: "Outfit";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  letter-spacing: 1px;
+}
+.block-won__btn-quit {
+  width: 76px;
+  margin-right: 16px;
+  background: #A8BFC9;
+  box-shadow: inset 0px -4px 0px #6B8997;
+}
+.block-won__btn-quit:hover {
+  background: #DBE8ED;
+  cursor: pointer;
+}
+.block-won__btn-next-round {
+  width: 148px;
+  background: #F2B137;
+  box-shadow: inset 0px -4px 0px #CC8B13;
+}
+.block-won__btn-next-round:hover {
+  background: #FFC860;
+  cursor: pointer;
 }/*# sourceMappingURL=styles.css.map */

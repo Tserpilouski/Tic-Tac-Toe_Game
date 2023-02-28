@@ -1,3 +1,14 @@
+
+
+$color-blue-inactive:#31C3BD
+$color-blue-active:#65E9E4
+$color-orange-inactive:#F2B137
+$color-orange-active:#FFC860
+$color-background:#1A2A33
+$color-element: #1F3641
+$color-grey-low:#A8BFC9
+$color-grey-bright:#DBE8ED
+
 html
     box-sizing: border-box
 
@@ -20,8 +31,6 @@ body
     height: 623px
     width: 460px
     background-color:#1A2A33
-    // &_active
-    //     display: none
     &__header
         display: flex
         flex-direction: row
@@ -47,6 +56,8 @@ body
         padding: 37px 0 0 37px
         &_margin
             margin-right: 0px
+        &:hover
+            cursor: pointer
 
 .foter
     &__item
@@ -82,3 +93,71 @@ body
         box-shadow: inset 0px -4px 0px #6B8997
         border-radius: 10px
         border: none
+
+.block-won
+    position: absolute
+    left: 0px
+    top: 40vh
+    background-color:  #9df9b6
+    width: 100%
+    height: 266px
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    &_inactive
+        display: none
+    &__info
+        margin-bottom: 16px
+        color: $color-grey-low
+    &__box-title
+        display: flex
+        flex-direction: row
+        align-items: center
+        margin-bottom: 24px
+        img
+            width: 64px
+            height: 64px
+            margin-right: 24px
+        h3
+            margin: 0px
+            height: 50px
+            font-family: 'Outfit'
+            font-style: normal
+            font-weight: 700
+            font-size: 40px
+            line-height: 50px
+            letter-spacing: 2.5px
+            color: $color-blue-inactive
+    &__box-btn
+        display: flex
+        flex-direction: row
+        button
+            height: 52px
+            border: none
+            border-radius: 10px
+            font-family: 'Outfit'
+            font-style: normal
+            font-weight: 700
+            font-size: 16px
+            line-height: 20px
+            text-align: center
+            letter-spacing: 1px
+    &__btn-quit
+        width: 76px
+        margin-right: 16px
+        background: $color-grey-low
+        box-shadow: inset 0px -4px 0px #6B8997
+        &:hover
+            background: $color-grey-bright
+            cursor: pointer
+    &__btn-next-round
+        width: 148px
+        background: $color-orange-inactive
+        box-shadow: inset 0px -4px 0px #CC8B13
+        &:hover
+            background: $color-orange-active
+            cursor: pointer
+            
+
+      
