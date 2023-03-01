@@ -11,9 +11,24 @@
 //     document.querySelector('.menu').classList.remove('menu_active');
 // }
 
+//Highlight the selected symbol in the menu X & O
+let prevButton = null;
+const wrapper = document.getElementById("character-selection");
+
+wrapper.addEventListener('click', (e) => {
+  const isButton = e.target.nodeName === 'BUTTON'; 
+  if (!isButton) {
+    return;
+  }
+  e.target.classList.add('btn-character_active');
+
+  if(prevButton !== null) {
+    prevButton.classList.remove('btn-character_active');  
+  }
+  prevButton = e.target;
+});
+
 //dodaanie hover efect 
-
-
 let first_move = 1;
 let path = "/icons/icon-x-outline.svg";
 let pathConst = "/icons/icon-x.svg";
@@ -102,9 +117,12 @@ function chek(data){
         }
         let row = 1;
         let col = 1;
+        let masiv = [];
         for(let j = 0; j < 3; j++){
             row = row * data[i][j];
             col = col * data[j][i];
+            masiv = [[i][j]];
+            console.log()
             if ((row || col) === 8){
                 win = "win X";
                 console.log(win);
@@ -130,7 +148,6 @@ function showYouWonX(){
 }
 
 function showYouWonO(){
-    console.log("broDupa");
     const imgXO = document.getElementById('imgXO');
     document.getElementById('h3title').style.color = "#F2B137";
     imgXO.removeAttribute("src");
@@ -143,7 +160,6 @@ function showYouWonO(){
 function nextRoundBtn(){
     const block = document.querySelector('.block-won');
     block.classList.add("block-won_inactive");
-    console.log("dupa")
     div_array.forEach((element) => {
         console.log(element)
         if(element.hasChildNodes()){

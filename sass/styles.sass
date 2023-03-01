@@ -1,5 +1,5 @@
 
-
+w
 $color-blue-inactive:#31C3BD
 $color-blue-active:#65E9E4
 $color-orange-inactive:#F2B137
@@ -19,13 +19,81 @@ body
     justify-content: center
     align-items: center
     margin: 0
+    button
+        border: none
 
 .menu
     height: 471px
     width: 460px
-    background-color: red
-    // &_active
-    //     display: none
+    background-color: $color-background
+    display: flex
+    flex-direction: column
+    align-items: center
+    &__box-icons
+        margin-bottom: 40px
+    &__box-btn
+        height: 205px
+        width: 100%
+        display: flex
+        flex-direction: column
+        align-items: center
+        padding-top: 24px
+        background: $color-element
+        box-shadow: inset 0px -8px 0px #10212A
+        border-radius: 15px
+
+.box-icons
+    height: 32px
+    width: 72px
+    img
+        width: 32px
+
+.box-btn
+    &__character-selection
+        width: 421px
+        height: 72px
+        display: flex
+        justify-content: center
+        align-items: center
+        background-color: $color-background 
+        border-radius: 10px
+        margin-bottom: 17px
+
+    &__titleh1
+        margin-bottom: 33px
+        font-family: 'Outfit'
+        font-style: normal
+        font-weight: 700
+        font-size: 16px
+        line-height: 20px
+        text-align: center
+        letter-spacing: 1px
+        text-transform: uppercase
+        color: $color-grey-bright
+        margin-top: 0px
+    &__titleh2
+        height: 18px
+        font-family: 'Outfit'
+        font-style: normal
+        font-weight: 500
+        font-size: 14px
+        line-height: 18px
+        text-align: center
+        letter-spacing: 0.875px
+        color:$color-grey-low
+        mix-blend-mode: normal
+        opacity: 0.5
+        margin-top: 0px
+
+.btn-character
+    &__x
+        width: 198px
+        height: 54px
+        border-radius: 10px
+        background-color: $color-background
+        color: #fff
+.btn-character_active
+    background-color: $color-grey-low
 
 .board
     height: 623px
@@ -92,7 +160,6 @@ body
         background: #A8BFC9
         box-shadow: inset 0px -4px 0px #6B8997
         border-radius: 10px
-        border: none
 
 .block-won
     position: absolute
@@ -134,7 +201,6 @@ body
         flex-direction: row
         button
             height: 52px
-            border: none
             border-radius: 10px
             font-family: 'Outfit'
             font-style: normal

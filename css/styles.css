@@ -10,11 +10,89 @@ body {
   align-items: center;
   margin: 0;
 }
+body button {
+  border: none;
+}
 
 .menu {
   height: 471px;
   width: 460px;
-  background-color: red;
+  background-color: #1A2A33;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.menu__box-icons {
+  margin-bottom: 40px;
+}
+.menu__box-btn {
+  height: 205px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 24px;
+  background: #1F3641;
+  box-shadow: inset 0px -8px 0px #10212A;
+  border-radius: 15px;
+}
+
+.box-icons {
+  height: 32px;
+  width: 72px;
+}
+.box-icons img {
+  width: 32px;
+}
+
+.box-btn__character-selection {
+  width: 421px;
+  height: 72px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1A2A33;
+  border-radius: 10px;
+  margin-bottom: 17px;
+}
+.box-btn__titleh1 {
+  margin-bottom: 33px;
+  font-family: "Outfit";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #DBE8ED;
+  margin-top: 0px;
+}
+.box-btn__titleh2 {
+  height: 18px;
+  font-family: "Outfit";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+  letter-spacing: 0.875px;
+  color: #A8BFC9;
+  mix-blend-mode: normal;
+  opacity: 0.5;
+  margin-top: 0px;
+}
+
+.btn-character__x {
+  width: 198px;
+  height: 54px;
+  border-radius: 10px;
+  background-color: #1A2A33;
+  color: #fff;
+}
+
+.btn-character_active {
+  background-color: #A8BFC9;
 }
 
 .board {
@@ -94,7 +172,6 @@ body {
   background: #A8BFC9;
   box-shadow: inset 0px -4px 0px #6B8997;
   border-radius: 10px;
-  border: none;
 }
 
 .block-won {
@@ -144,7 +221,6 @@ body {
 }
 .block-won__box-btn button {
   height: 52px;
-  border: none;
   border-radius: 10px;
   font-family: "Outfit";
   font-style: normal;

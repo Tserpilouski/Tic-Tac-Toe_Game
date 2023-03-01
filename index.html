@@ -10,22 +10,26 @@
 <body>
     <section class="main">
         <!-- Menu block -->
-        <!-- <div class="menu">
-            <div>
-                <h1>PICK PLAYER 1'S MARK</h1>
-                <div>
-                    <button>X</button>
-                    <Button>O</Button>
+        <div class="menu">
+            <div class="menu__box-icons box-icons">
+                <img src="./icons/icon-x.svg" alt="x">
+                <img src="./icons/icon-o.svg" alt="o">
+            </div>
+            <div class="menu__box-btn box-btn">
+                <h1 class="box-btn__titleh1">PICK PLAYER 1'S MARK</h1>
+                <div id="character-selection" class="box-btn__character-selection btn-character">
+                    <button class="btn-character__x">X</button>
+                    <Button class="btn-character__x">O</Button>
                 </div>
-                <h2>REMEMBER : X GOES FIRST</h2>
+                <h2 class="box-btn__titleh2">REMEMBER : X GOES FIRST</h2>
             </div>
             <button id="play-cpu" onclick="displayMenu()">NEW GAME (VS CPU)</button>
             <button id="play-player">NEW GAME (VS PLAYER)</button>
-        </div> -->
+        </div>
         <!-- Board block -->
         <div class="board">
             <div class="board__header">
-                <div class="header__box-icon">
+                <div class="box-icons">
                     <img src="./icons/icon-x.svg" alt="x">
                     <img src="./icons/icon-o.svg" alt="o">
                 </div>
