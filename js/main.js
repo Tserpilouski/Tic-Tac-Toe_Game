@@ -1,15 +1,15 @@
-// const playBtn = document.getElementById('play');
-// const menuBtn = document.getElementById('menu');
+const playBtn = document.getElementById('play');
+const menuBtn = document.getElementById('menu');
 
-// function displayMenu(){
-//     document.querySelector('.menu').classList.add('menu_active');
-//     document.querySelector('.board').classList.remove('board_active');
-// }
+function displayMenu(){
+    document.querySelector('.menu').classList.add('menu_active');
+    document.querySelector('.board').classList.remove('board_active');
+}
 
-// function displayBoard(){
-//     document.querySelector('.board').classList.add('board_active');
-//     document.querySelector('.menu').classList.remove('menu_active');
-// }
+function displayBoard(){
+    document.querySelector('.board').classList.add('board_active');
+    document.querySelector('.menu').classList.remove('menu_active');
+}
 
 //Highlight the selected symbol in the menu X & O
 let prevButton = null;
